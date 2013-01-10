@@ -7,6 +7,7 @@ master<br />
 Sylvain Daclin [@sdaclin](https://twitter.com/#!/sdaclin)
 
 An AngularJS Directive to manage github.com/tcrosen/ enhanced version of Twitter's Bootstrap Typeahead plugin.<br />
+Une directive AngularJs pour gérer la version améliorée par github.com/tcrosen/ du plugin Typeahead Twitter's Bootstrap.
 <http://twitter.github.com/bootstrap/javascript.html#typeahead>
 <https://github.com/tcrosen/twitter-bootstrap-typeahead>
 
