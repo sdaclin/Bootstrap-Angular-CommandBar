@@ -1,29 +1,37 @@
 Twitter Bootstrap AngularJS Commandbar directive
 ========================
-
 * * *
 
 master<br />
 Sylvain Daclin [@sdaclin](https://twitter.com/#!/sdaclin)
 
-An AngularJS Directive to manage github.com/tcrosen/ enhanced version of Twitter's Bootstrap Typeahead plugin.<br />
-Une directive AngularJs pour gérer la version améliorée par github.com/tcrosen/ du plugin Typeahead Twitter's Bootstrap.
-<http://twitter.github.com/bootstrap/javascript.html#typeahead>
+An AngularJS Directive to get a commandbar.
+
+![Commandbar in action](img/commandbar.png)
+
+This directive is based on Twitter's Bootstrap Typeahead component and more particulary github.com/tcrosen/ enhanced version of this plugins.<br />
+<http://twitter.github.com/bootstrap/javascript.html#typeahead><br />
 <https://github.com/tcrosen/twitter-bootstrap-typeahead>
 
-A propos
+About
 -----------------
-Merci à [@mdo](https://twitter.com/#!/mdo) et [@fat](https://twitter.com/#!/fat) de [@twitter](https://twitter.com/) pour leur super travail sur Twitter Bootstrap.<br />
-Merci à Terry Rosen [@rerrify](https://twitter.com/#!/rerrify) pour sa version améliorée de typeahead.<br />
+Many thanks to [@mdo](https://twitter.com/#!/mdo) et [@fat](https://twitter.com/#!/fat) from [@twitter](https://twitter.com/) for their work on Twitter Bootstrap.<br />
+Many thanks to [@rerrify](https://twitter.com/#!/rerrify) for is enhanced version of typeahead.<br />
 
-J'avais besoin de plus de fonctionnalité donc j'ai créé une version supplémentaire afin de proposer les fonctionnalités suivantes :
+I need some more fonctionnality so I forked tcrosen repository to provide :
 
-- une directive AngularJs : **<input commandbar id="commandbarId" type="text" ng-model="commandbarValue" data="commandbarData(query)" callback="commandbarCallback(dataSelected)" placeholder="Type command ..." />**
-- possibilité de spécifier une source de données provenant d'une méthode du controller Angular JS
-- possibilité de spécifier une méthode de callback lorsque une commande est sélectionnée provenant du controller Angular JS
-- possibilité de spécifier les commandes sous forme d'objet js qui sont alors retournés dans la méthode de callback
+- an AngularJs directive : **<input commandbar id="commandbarId" type="text" ng-model="commandbarValue" data="commandbarData(query)" callback="commandbarCallback(dataSelected)" placeholder="Type command ..." />**
+- ability to specify a data source from an angular controller method (tcrosen only propose an array value or an ajax function)
+- ability to specify an angular callback handler which is triggered when a command is selected
+- ability to set commands as javascript objects in order to get a command object in the callback handler instead of a simple value
 
-Requis
+Futur enhancement
+-----------------
+- possibility to set an angular template for each command
+- code enhancement to respect angular best practices (need to improve my angular skills...)
+- code cleaning to remove ajax javascript typeahead functionnality in order to rely only on angular datasource function (which provide ajax datasource by the use of angular $resources module)
+
+Required
 -----------------
 * Twitter Bootstrap 2.0+
 * AngularJS 1.0.3+
@@ -54,19 +62,19 @@ Installation
     <script src="js/bootstrap-commandbar.js" type="text/javascript"></script>
     <script src="js/bootstrap-commandbar-angular.js" type="text/javascript"></script>
 
-4) ajouter la dépendance dans le module angular
+4) add dependency in your angular module
 
 ```javascript
     angular.module('yourapp', ['commandBar']) [...]
 ```
 
-5) ajouter une commandbar dans votre html
+5) add a commandbar in your html
 
 ```html
     <input commandbar id="commandbarId" type="text" ng-model="commandbarValue" data="commandbarData(query)" callback="commandbarCallback(dataSelected)" placeholder="Type command ..." />
 ```
 
-6) ajouter les handlers dans votre controller
+6) add commandbar handler in your angular controller
 ```javascript
     function CommandBarCtrl($scope) {
         $scope.commandbarData = function(query){
@@ -99,7 +107,7 @@ Installation
         };
     }
 ```
-Un example se trouve dans le répertoire `/demo`
+An example exists in `/demo` directory
 
 Change Log
 -----------------
