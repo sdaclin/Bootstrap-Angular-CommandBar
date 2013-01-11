@@ -35,8 +35,7 @@ angular.module('commandBar', [])
             }
         };
 
-    }])
-    .init();
+    }]);
 
 function CommandBarCtrl($scope) {
     $scope.commandbarData = function(query){
