@@ -7,7 +7,7 @@ Sylvain Daclin [@sdaclin](https://twitter.com/#!/sdaclin)
 
 An AngularJS Directive to get a commandbar.
 
-![Commandbar in action](https://raw.github.com/sdaclin/Bootstrap-Angular-CommandBar/master/img/commandbar.png)
+![Commandbar in action](https://raw.github.com/sdaclin/Bootstrap-Angular-CommandBar/master/demo/img/commandbar.png)
 
 This directive is based on Twitter's Bootstrap Typeahead component and more particulary github.com/tcrosen/ enhanced version of this plugins.<br />
 <http://twitter.github.com/bootstrap/javascript.html#typeahead><br />
